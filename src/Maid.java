@@ -5,7 +5,7 @@ import javax.security.auth.login.LoginException;
 
 public class Maid {
     public static void main(String[] args) throws LoginException {
-        JDA MaidBot = JDABuilder.createLight("OTg0MTMzOTQ4Mjk4OTExNzc1.Gicdpu.wkCvulbWPa77BXEgfWxlBToRq29aqmbgGkGicA").build();
+        JDA MaidBot = JDABuilder.createLight("TOKEN HERE").build();
         MaidBot.addEventListener(new MaidListener());
     }
 }
