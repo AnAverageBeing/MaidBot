@@ -1,6 +1,7 @@
 package commands;
 
 
+import commands.impl.game;
 import commands.impl.ping;
 import commands.impl.purge;
 import net.dv8tion.jda.api.entities.Guild;
@@ -19,6 +20,7 @@ public class CommandManager {
     public static void registerCommands() {
         commands.add(new ping());
         commands.add(new purge());
+        commands.add(new game());
     }
 
     public static CopyOnWriteArrayList<ICommand> getCommands(){
