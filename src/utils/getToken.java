@@ -3,7 +3,7 @@ package utils;
 import java.io.BufferedReader;
 import java.io.File;
 
-public class getToken {
+public class GetToken {
     
     public static String get(){
         try {
