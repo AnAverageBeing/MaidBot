@@ -5,4 +5,3 @@
  - !ping -> retuns latency of bot
  - !purge -> helps clear chat (!purge [amount])
  - !help -> really do i need to explain it
- - !game -> snake game (Work in progress)
