@@ -19,8 +19,6 @@ public class CommandManager {
 
     public static void registerCommands() {
         commands.add(new ping());
-        commands.add(new purge());
-        commands.add(new game());
     }
 
     public static CopyOnWriteArrayList<ICommand> getCommands(){
