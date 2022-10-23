@@ -1,9 +1,8 @@
 package commands;
 
 
-import commands.impl.game;
 import commands.impl.ping;
-import commands.impl.purge;
+
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
