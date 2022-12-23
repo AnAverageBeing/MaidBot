@@ -1,5 +1,5 @@
-# MaidBot
-MY Discord Bot Base using JDA in java
+# MaidBOT
+MY Discord BOT Base using JDA in java
  ## Commands
- - !ping -> retuns latency of bot
+ - !ping -> retuns latency of BOT
  - !help -> really do i need to explain it

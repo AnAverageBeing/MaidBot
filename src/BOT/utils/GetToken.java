@@ -1,11 +1,11 @@
-package utils;
+package BOT.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
 
 public class GetToken {
-    
-    public static String get(){
+
+    public static String get() {
         try {
             BufferedReader br = new BufferedReader(new java.io.FileReader(new File("token.txt")));
             String line = br.readLine();

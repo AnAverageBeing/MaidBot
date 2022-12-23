@@ -1,4 +1,4 @@
-package commands;
+package BOT.commands;
 
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -6,7 +6,13 @@ import net.dv8tion.jda.api.entities.User;
 
 public interface ICommand {
     public String getName();
+
     public String getDescription();
+
+    public String getHelp();
+
     public boolean isAdminCommand();
-    public abstract void onCommand(String command, String[] args, Message message, User sender, Guild guild) throws Exception;
+
+    public abstract void onCommand(String command, String[] args, Message message, User sender, Guild guild)
+            throws Exception;
 }
