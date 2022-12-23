@@ -37,7 +37,7 @@ public class help implements ICommand{
         }  else {
             for (ICommand cmd : CommandManager.getCommands()) {
                 if(args[0].equalsIgnoreCase(cmd.getName())){
-                    message.getChannel().sendMessage(cmd.getHelp());
+                    message.getChannel().sendMessage(cmd.getHelp()).queue();
                 }
             }
         }     
