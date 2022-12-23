@@ -11,12 +11,12 @@ public class nekosfun implements ICommand {
 
     @Override
     public String getName() {
-        return "rimage";
+        return "rstuff";
     }
 
     @Override
     public String getDescription() {
-        return "sends random image";
+        return "sends random anime image or gifs for a given tag";
     }
 
     @Override
