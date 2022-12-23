@@ -25,7 +25,7 @@ public class help implements ICommand {
 
     @Override
     public String getHelp() {
-        return "Usage: " + Maid.prefix + "help or " + Maid.prefix + "help {command}";
+        return "Usage: `" + Maid.prefix + "help` or `" + Maid.prefix + "help {command}`";
     }
 
     @Override

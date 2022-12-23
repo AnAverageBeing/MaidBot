@@ -10,6 +10,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 
 public class HelpEmbed {
     private static MessageEmbed embed = null;
+    
     static {
         EmbedBuilder embedBuilder = new EmbedBuilder()
                 .setColor(new Color(32, 247, 93))
