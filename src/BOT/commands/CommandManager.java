@@ -1,6 +1,7 @@
 package BOT.commands;
 
 import BOT.Maid;
+import BOT.commands.impl.help;
 import BOT.commands.impl.nekosfun;
 import BOT.commands.impl.ping;
 
@@ -19,6 +20,7 @@ public class CommandManager {
     }
 
     public static void registerCommands() {
+        commands.add(new help());
         commands.add(new ping());
         commands.add(new nekosfun());
     }
