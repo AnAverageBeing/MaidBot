@@ -44,6 +44,9 @@ public class nekosfun implements ICommand {
             if (NekosFun.isTagNSFW(args[0])) {
                 if(!message.getTextChannel().isNSFW()){
                     message.reply("Please use a NSFW channel for this tag!").queue();
+                } else {
+                    message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0])).queue();
+                    message.getTextChannel().sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
                 }
             } else {
                 message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0])).queue();

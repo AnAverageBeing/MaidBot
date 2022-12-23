@@ -23,6 +23,7 @@ public class NekosFun {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(result.split("\"")[3]);
         return result.split("\"")[3];
     }
 
