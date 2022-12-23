@@ -12,14 +12,12 @@ public class help implements ICommand{
 
     @Override
     public String getName() {
-        // TODO Auto-generated method stub
-        return null;
+        return "help";
     }
 
     @Override
     public String getDescription() {
-        // TODO Auto-generated method stub
-        return null;
+        return "helps you";
     }
 
     @Override
