@@ -34,7 +34,7 @@ public class nekosfun implements ICommand {
 
     @Override
     public void onCommand(String command, String[] args, Message message, User sender, Guild guild) throws Exception {
-        if(!message.isFromGuild()){
+        if (!message.isFromGuild()) {
             return;
         }
         if (args.length < 1) {
@@ -42,7 +42,7 @@ public class nekosfun implements ICommand {
         }
         if (NekosFun.isValidTag(args[0].toLowerCase())) {
             if (NekosFun.isTagNSFW(args[0].toLowerCase())) {
-                if(!message.getTextChannel().isNSFW()){
+                if (!message.getTextChannel().isNSFW()) {
                     message.reply("Please use a NSFW channel for this tag!").queue();
                 } else {
                     message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
