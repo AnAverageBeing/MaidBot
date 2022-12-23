@@ -32,12 +32,14 @@ public class CommandManager {
     public void callCommand(String input, Message message, User sender, Guild guild) {
         String[] split = input.split(" ");
         String command = split[0].replace(Maid.prefix, "");
-        System.out.println(command);
-        String args = input.substring(command.length()).trim();
+        String[] args = new String[split.length-1];
+        for (int i = 1; i < split.length; i++) {
+            args[i-1] = split[i];
+        }
         for (ICommand c : getCommands()) {
             if (c.getName().equalsIgnoreCase(command)) {
                 try {
-                    c.onCommand(args, args.split(" "), message, sender, guild);
+                    c.onCommand(input, args, message, sender, guild);
                 } catch (Exception e) {
                 }
                 return;
