@@ -40,18 +40,20 @@ public class nekosfun implements ICommand {
         if (args.length < 1) {
             message.getChannel().sendMessage(getHelp()).queue();
         }
-        if (NekosFun.isValidTag(args[0])) {
-            if (NekosFun.isTagNSFW(args[0])) {
+        if (NekosFun.isValidTag(args[0].toLowerCase())) {
+            if (NekosFun.isTagNSFW(args[0].toLowerCase())) {
                 if(!message.getTextChannel().isNSFW()){
                     message.reply("Please use a NSFW channel for this tag!").queue();
                 } else {
-                    message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0])).queue();
+                    message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
                     message.getTextChannel().sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
                 }
             } else {
-                message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0])).queue();
+                message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
                 message.getTextChannel().sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
             }
+        } else {
+            message.getTextChannel().sendMessage("Invalid token type .help rstuff to see valid tags").queue();
         }
     }
 
