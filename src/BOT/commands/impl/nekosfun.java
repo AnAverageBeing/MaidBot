@@ -22,7 +22,7 @@ public class nekosfun implements ICommand {
     @Override
     public String getHelp() {
         return "Usage: `" + Maid.prefix + "rimage {tag}`" +
-                "\n**Tags:**\n" +
+                "\n\n**Tags:**\n\n" +
                 "NSFW TAGS: ```4k,ass,blowjob,boobs,cum,feet,hentai,spank,gasm,lesbian,lewd,pussy```" + "\n" +
                 "SFW TAGS: ```kiss,lick,hug,baka,poke,cry,smug,slap,tickle,pat,laugh,feed,cuddle,wallpapers```";
     }
