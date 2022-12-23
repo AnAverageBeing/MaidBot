@@ -1,14 +1,17 @@
 package BOT.commands.impl;
 
+import java.awt.Color;
+
 import BOT.Maid;
 import BOT.commands.CommandManager;
 import BOT.commands.ICommand;
 import BOT.utils.HelpEmbed;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 
-public class help implements ICommand{
+public class help implements ICommand {
 
     @Override
     public String getName() {
@@ -22,7 +25,7 @@ public class help implements ICommand{
 
     @Override
     public String getHelp() {
-        return "Usage: "+Maid.prefix+"help or "+Maid.prefix+"help {command}";
+        return "Usage: " + Maid.prefix + "help or " + Maid.prefix + "help {command}";
     }
 
     @Override
@@ -32,16 +35,17 @@ public class help implements ICommand{
 
     @Override
     public void onCommand(String command, String[] args, Message message, User sender, Guild guild) throws Exception {
-        if(args.length < 1){
-            message.getChannel().sendMessageEmbeds(HelpEmbed.getEmbedBuilder().build()).queue();
-        }  else {
+        if (args.length < 1) {
+
+            message.getChannel().sendMessageEmbeds(HelpEmbed.getembed()).queue();
+        } else {
             for (ICommand cmd : CommandManager.getCommands()) {
-                if(args[0].equalsIgnoreCase(cmd.getName())){
+                if (args[0].equalsIgnoreCase(cmd.getName())) {
                     message.getChannel().sendMessage(cmd.getHelp()).queue();
                     return;
                 }
             }
-        }     
+        }
     }
-    
+
 }
