@@ -2,6 +2,7 @@ package BOT.commands.impl;
 
 import BOT.Maid;
 import BOT.commands.ICommand;
+import BOT.utils.Update;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -32,7 +33,12 @@ public class update implements ICommand{
 
 	@Override
 	public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
-        if(guild.getMemberById(message.getAuthor().getId()).hasPermission(Permission.ADMINISTRATOR));
+        if(!guild.getMemberById(message.getAuthor().getId()).hasPermission(Permission.ADMINISTRATOR)){
+			channel.sendMessage("This is Admin only command!");
+			return;
+		} 
+		channel.sendMessage("**UPDATING BOT!**\n**the bot will restart soon.**");
+		Update.updateJAR();
 	}
     
 }
