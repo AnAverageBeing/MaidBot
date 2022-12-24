@@ -6,6 +6,7 @@ import BOT.commands.ICommand;
 import BOT.utils.HelpEmbed;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
 public class help implements ICommand {
@@ -31,14 +32,14 @@ public class help implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, Guild guild) throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
         if (args.length < 1) {
 
-            message.getChannel().sendMessageEmbeds(HelpEmbed.getembed()).queue();
+            channel.sendMessageEmbeds(HelpEmbed.getembed()).queue();
         } else {
             for (ICommand cmd : CommandManager.getCommands()) {
                 if (args[0].equalsIgnoreCase(cmd.getName())) {
-                    message.getChannel().sendMessage(cmd.getHelp()).queue();
+                    channel.sendMessage(cmd.getHelp()).queue();
                     return;
                 }
             }

@@ -5,6 +5,7 @@ import BOT.commands.ICommand;
 import BOT.utils.NekosFun;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
 public class nekosfun implements ICommand {
@@ -33,7 +34,7 @@ public class nekosfun implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, Guild guild) throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
         if (!message.isFromGuild()) {
             return;
         }
@@ -42,18 +43,18 @@ public class nekosfun implements ICommand {
         }
         if (NekosFun.isValidTag(args[0].toLowerCase())) {
             if (NekosFun.isTagNSFW(args[0].toLowerCase())) {
-                if (!message.getTextChannel().isNSFW()) {
+                if (!channel.isNSFW()) {
                     message.reply("Please use a NSFW channel for this tag!").queue();
                 } else {
-                    message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
-                    message.getTextChannel().sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
+                    channel.sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
+                    channel.sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
                 }
             } else {
-                message.getTextChannel().sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
-                message.getTextChannel().sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
+                channel.sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
+                channel.sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
             }
         } else {
-            message.getTextChannel().sendMessage("Invalid token type .help rstuff to see valid tags").queue();
+            channel.sendMessage("Invalid token type .help rstuff to see valid tags").queue();
         }
     }
 

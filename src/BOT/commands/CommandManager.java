@@ -7,6 +7,7 @@ import BOT.commands.impl.ping;
 
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class CommandManager {
         return commands;
     }
 
-    public void callCommand(String input, Message message, User sender, Guild guild) {
+    public void callCommand(String input, Message message, User sender, TextChannel channel,Guild guild) {
         String[] split = input.split(" ");
         String command = split[0].replace(Maid.prefix, "");
         String[] args = new String[split.length - 1];
@@ -39,7 +40,7 @@ public class CommandManager {
         for (ICommand c : getCommands()) {
             if (c.getName().equalsIgnoreCase(command)) {
                 try {
-                    c.onCommand(input, args, message, sender, guild);
+                    c.onCommand(input, args, message, sender, channel, guild);
                 } catch (Exception e) {
                 }
                 return;

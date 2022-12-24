@@ -14,13 +14,17 @@ public class MaidListener extends ListenerAdapter {
         if(!event.getMessage().getContentRaw().startsWith(Maid.prefix)){
             return;
         }
+        if(!event.isFromGuild()){
+            return;
+        }
         Message message = event.getMessage();
         Guild guild = event.getGuild();
         User sender = event.getAuthor();
+        TextChannel channel = event.getTextChannel();
         CommandManager commandManager = new CommandManager();
         //OTHER COMMAND HANDLING
         try {
-            commandManager.callCommand(message.getContentRaw(), message, sender, guild);
+            commandManager.callCommand(message.getContentRaw(), message, sender, channel, guild);
         } catch (Exception e) {
             e.printStackTrace();
         }
