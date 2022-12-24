@@ -5,6 +5,7 @@ import BOT.commands.impl.help;
 import BOT.commands.impl.nekosfun;
 import BOT.commands.impl.ping;
 import BOT.commands.impl.stop;
+import BOT.commands.impl.sudo;
 import BOT.commands.impl.update;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
@@ -27,6 +28,7 @@ public class CommandManager {
         commands.add(new update());
         commands.add(new ping());
         commands.add(new stop());
+        commands.add(new sudo());
         commands.add(new nekosfun());
     }
 
