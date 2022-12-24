@@ -24,7 +24,7 @@ public class nekosfun implements ICommand {
     public String getHelp() {
         return "Usage: `" + Maid.prefix + "rstuff {tag}`" +
                 "\n\n**Tags:**\n\n" +
-                "NSFW TAGS: ```4k,ass,blowjob,boobs,cum,feet,hentai,spank,gasm,lesbian,lewd,pussy```" + "\n" +
+                "NSFW TAGS: ```4k,blowjob,boobs,cum,feet,hentai,spank,gasm,lesbian,lewd,pussy```" + "\n" +
                 "SFW TAGS: ```kiss,lick,hug,baka,poke,cry,smug,slap,tickle,pat,laugh,feed,cuddle,wallpapers```";
     }
 

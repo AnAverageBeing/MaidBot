@@ -7,7 +7,7 @@ public class NekosFun {
     private static String api = "http://api.nekos.fun:8080/api/";
     private static String[] sfwTags = { "kiss", "lick", "hug", "baka", "poke", "cry", "smug", "slap", "tickle", "pat",
             "laugh", "feed", "cuddle", "wallpapers" };
-    private static String[] nsfwTags = { "4k", "ass", "blowjob", "boobs", "cum", "feet", "hentai", "spank", "gasm",
+    private static String[] nsfwTags = { "4k", "blowjob", "boobs", "cum", "feet", "hentai", "spank", "gasm",
             "lesbian", "lewd", "pussy" };
 
     public static String getImageURL(String tag) {
