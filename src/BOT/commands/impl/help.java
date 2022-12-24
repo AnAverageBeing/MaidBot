@@ -1,12 +1,9 @@
 package BOT.commands.impl;
 
-import java.awt.Color;
-
 import BOT.Maid;
 import BOT.commands.CommandManager;
 import BOT.commands.ICommand;
 import BOT.utils.HelpEmbed;
-import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
