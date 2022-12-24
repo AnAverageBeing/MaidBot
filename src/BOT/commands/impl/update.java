@@ -34,12 +34,7 @@ public class update implements ICommand{
 
 	@Override
 	public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
-		
-        if(!guild.getMember(sender).hasPermission(Permission.ADMINISTRATOR)){
-			channel.sendMessage("This is Admin only command!");
-			return;
-		} 
-		channel.sendMessage("**UPDATING BOT!**\n**the bot will restart soon.**");
+		channel.sendMessage("**UPDATING BOT!**\n**the bot will restart soon.**").queue();
 		Update.updateJAR();
 	}
     

@@ -4,7 +4,9 @@ import BOT.Maid;
 import BOT.commands.impl.help;
 import BOT.commands.impl.nekosfun;
 import BOT.commands.impl.ping;
+import BOT.commands.impl.stop;
 import BOT.commands.impl.update;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -24,6 +26,7 @@ public class CommandManager {
         commands.add(new help());
         commands.add(new update());
         commands.add(new ping());
+        commands.add(new stop());
         commands.add(new nekosfun());
     }
 
@@ -41,6 +44,12 @@ public class CommandManager {
         for (ICommand c : getCommands()) {
             if (c.getName().equalsIgnoreCase(command)) {
                 try {
+                    if(c.isAdminCommand()){
+                        if(!guild.getMember(sender).hasPermission(Permission.ADMINISTRATOR)){
+                            channel.sendMessage("This is Admin only command!").queue();
+                            return;
+                        } 
+                    }
                     c.onCommand(input, args, message, sender, channel, guild);
                 } catch (Exception e) {
                     e.printStackTrace();
