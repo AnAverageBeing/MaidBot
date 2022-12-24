@@ -16,5 +16,6 @@ public class Maid {
         builder.enableIntents(GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS));
         JDA BOT = builder.build();
         BOT.addEventListener(new MaidListener());
+        
     }
 }

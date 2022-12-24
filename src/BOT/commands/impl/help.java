@@ -32,7 +32,8 @@ public class help implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
+            throws Exception {
         if (args.length < 1) {
 
             channel.sendMessageEmbeds(HelpEmbed.getembed()).queue();

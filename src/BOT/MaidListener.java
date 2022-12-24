@@ -11,10 +11,10 @@ public class MaidListener extends ListenerAdapter {
         if (event.getAuthor().isBot()) {
             return;
         }
-        if(!event.getMessage().getContentRaw().startsWith(Maid.prefix)){
+        if (!event.getMessage().getContentRaw().startsWith(Maid.prefix)) {
             return;
         }
-        if(!event.isFromGuild()){
+        if (!event.isFromGuild()) {
             return;
         }
         Message message = event.getMessage();
@@ -22,7 +22,7 @@ public class MaidListener extends ListenerAdapter {
         User sender = event.getAuthor();
         TextChannel channel = event.getTextChannel();
         CommandManager commandManager = new CommandManager();
-        //OTHER COMMAND HANDLING
+        // OTHER COMMAND HANDLING
         try {
             commandManager.callCommand(message.getContentRaw(), message, sender, channel, guild);
         } catch (Exception e) {

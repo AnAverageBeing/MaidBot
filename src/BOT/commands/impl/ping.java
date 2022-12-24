@@ -27,7 +27,8 @@ public class ping implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
+            throws Exception {
         Message message1 = channel.sendMessage("Pinging...").complete();
         long ping = message.getTimeCreated().until(message1.getTimeCreated(), ChronoUnit.MILLIS);
         message1.editMessage("> **Ping:** **`" + ping + "`** **ms**").queue();

@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
-public class stop implements ICommand{
+public class stop implements ICommand {
 
     @Override
     public String getName() {
@@ -21,7 +21,7 @@ public class stop implements ICommand{
 
     @Override
     public String getHelp() {
-        return "Usage: "+Maid.prefix+"stop \n this command stops the bot.";
+        return "Usage: " + Maid.prefix + "stop \n this command stops the bot.";
     }
 
     @Override
@@ -32,8 +32,8 @@ public class stop implements ICommand{
     @Override
     public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
             throws Exception {
-                channel.sendMessage("BYE BYE (uwu)").queue();
-                System.exit(0);
+        channel.sendMessage("BYE BYE (uwu)").queue();
+        System.exit(0);
     }
-    
+
 }

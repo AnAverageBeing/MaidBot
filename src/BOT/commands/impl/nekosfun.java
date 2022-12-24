@@ -34,7 +34,8 @@ public class nekosfun implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
+            throws Exception {
         if (!message.isFromGuild()) {
             return;
         }

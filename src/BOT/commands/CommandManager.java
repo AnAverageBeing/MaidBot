@@ -34,7 +34,7 @@ public class CommandManager {
         return commands;
     }
 
-    public void callCommand(String input, Message message, User sender, TextChannel channel,Guild guild) {
+    public void callCommand(String input, Message message, User sender, TextChannel channel, Guild guild) {
         String[] split = input.split(" ");
         String command = split[0].replace(Maid.prefix, "");
         String[] args = new String[split.length - 1];
@@ -44,11 +44,11 @@ public class CommandManager {
         for (ICommand c : getCommands()) {
             if (c.getName().equalsIgnoreCase(command)) {
                 try {
-                    if(c.isAdminCommand()){
-                        if(!guild.getMember(sender).hasPermission(Permission.ADMINISTRATOR)){
+                    if (c.isAdminCommand()) {
+                        if (!guild.getMember(sender).hasPermission(Permission.ADMINISTRATOR)) {
                             channel.sendMessage("This is Admin only command!").queue();
                             return;
-                        } 
+                        }
                     }
                     c.onCommand(input, args, message, sender, channel, guild);
                 } catch (Exception e) {

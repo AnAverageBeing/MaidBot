@@ -9,10 +9,11 @@ import java.nio.file.StandardCopyOption;
 
 public class Update {
     private final static String link = "https://github.com/AnAverageBeing/MaidBot/raw/main/MaidBot.jar";
+
     public static void updateJAR() {
         try {
-           InputStream inputstream = new URL(link).openStream();
-           Files.copy(inputstream, Paths.get("MaidBot.jar"), StandardCopyOption.REPLACE_EXISTING);
+            InputStream inputstream = new URL(link).openStream();
+            Files.copy(inputstream, Paths.get("MaidBot.jar"), StandardCopyOption.REPLACE_EXISTING);
         } catch (Exception e) {
             e.printStackTrace();
         }
