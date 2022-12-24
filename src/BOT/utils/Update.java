@@ -18,9 +18,9 @@ public class Update {
         }
         try {
             Process p = Runtime.getRuntime().exec("./run.sh");
+            System.exit(0);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.exit(0);
     }
 }

@@ -33,6 +33,7 @@ public class stop implements ICommand{
     public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
             throws Exception {
                 channel.sendMessage("BYE BYE (uwu)").queue();
+                System.exit(0);
     }
     
 }
