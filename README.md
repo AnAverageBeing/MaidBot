@@ -1,9 +1,11 @@
 # MaidBOT
 MY Discord BOT using JDA in java
  ## Commands
- - !ping -> retuns latency of BOT
- - !help -> really do i need to explain it
- - !rstuff -> get random anime images (using tags)
+ - .ping -> retuns latency of BOT
+ - .help -> really do i need to explain it
+ - .rstuff -> get random anime images (using tags)
+ - .update -> update and rerun bot (gets jar from this github)
+ - .stop -> kills the bot
  ## How to use
  make a file called token.txt and put ur bot token there
  copy the run.sh script in same directory
