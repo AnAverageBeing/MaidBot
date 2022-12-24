@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.utils.MemberCachePolicy;
 
 public class update implements ICommand{
 
@@ -33,7 +34,8 @@ public class update implements ICommand{
 
 	@Override
 	public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) throws Exception {
-        if(!guild.getMemberById(message.getAuthor().getId()).hasPermission(Permission.ADMINISTRATOR)){
+		
+        if(!guild.getMember(sender).hasPermission(Permission.ADMINISTRATOR)){
 			channel.sendMessage("This is Admin only command!");
 			return;
 		} 

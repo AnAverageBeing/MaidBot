@@ -43,6 +43,7 @@ public class CommandManager {
                 try {
                     c.onCommand(input, args, message, sender, channel, guild);
                 } catch (Exception e) {
+                    e.printStackTrace();
                 }
                 return;
             }
