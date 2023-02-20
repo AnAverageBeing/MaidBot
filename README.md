@@ -30,14 +30,16 @@
 
 <h2 align="center">🛠️ How to Use</h2>
 
-<p align="center">
+<p>
   To use MaidBOT, follow these steps:
 </p>
 
 <ol>
-  <li>Create a file named <code>token.txt</code> and insert your bot token into it. </li>
-  <li>Copy the <code>run.sh</code> script into the same directory as the <code>MaidBot.jar</code> file. </li>
-  <li>Run the <code>MaidBot.jar</code> file, which should also be located in the same directory as the other files. </li>
+  <li>Create a directory to hold bot files. </li>
+  <li>Create a file named <code>token.txt</code> and put your bot token into it. </li>
+  <li>Copy the <code>run.sh</code> script into the directory. </li>
+  <li>Copy <code>MaidBot.jar</code> into the directory. </li>
+  <li>Run the <code>run.sh</code> script. </li>
 </ol>
 
 <h2 align="center">💻 Improving MaidBOT</h2>
