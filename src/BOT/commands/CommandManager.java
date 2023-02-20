@@ -4,6 +4,7 @@ import BOT.Maid;
 import BOT.commands.impl.help;
 import BOT.commands.impl.nekosfun;
 import BOT.commands.impl.ping;
+import BOT.commands.impl.prefix;
 import BOT.commands.impl.stop;
 import BOT.commands.impl.update;
 import net.dv8tion.jda.api.Permission;
@@ -24,6 +25,7 @@ public class CommandManager {
 
     public static void registerCommands() {
         commands.add(new help());
+        commands.add(new prefix());
         commands.add(new update());
         commands.add(new ping());
         commands.add(new stop());
