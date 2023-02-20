@@ -25,6 +25,6 @@
     <h2>💻 Improving MaidBOT</h2>
     <p> Feel free to contribute to MaidBOT by submitting pull requests or opening issues on this GitHub repository. Your feedback is greatly appreciated. </p>
     <h2>📜 License</h2>
-    <p> MaidBOT is licensed under the <a href="https://opensource.org/licenses/MIT" target="_new">MIT License</a>. See the LICENSE file for more information. </p>
+    <p> MaidBOT is licensed under the <a href="https://opensource.org/licenses/MIT" target="_new">MIT License</a>. See the <a href="LICENSE">LICENSE</a> file for more information. </p>
   </body>
 </html>
