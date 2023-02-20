@@ -5,19 +5,19 @@
 <p>The following commands are currently available:</p>
 <ul>
   <li>
-    🟢<code> .ping</code> - Returns the latency of the bot.
+    🟢 <code>.ping</code> - Returns the latency of the bot.
   </li>
   <li>
-    ❓<code> .help</code> - Provides information about the available commands.
+    ❓ <code>.help</code> - Provides information about the available commands.
   </li>
   <li>
-    🌐<code> .rstuff</code> - Retrieves random anime images based on specified tags.
+    🌐 <code>.rstuff</code> - Retrieves random anime images based on specified tags.
   </li>
   <li>
-    🔄<code> .update</code> - Updates and re-runs the bot by downloading the latest version from this GitHub repository.
+    🔄 <code>.update</code> - Updates and re-runs the bot by downloading the latest version from this GitHub repository.
   </li>
   <li>
-    ⏹️<code> .stop</code> - Stops the bot.
+    ⏹️ <code>.stop</code> - Stops the bot.
   </li>
 </ul>
 
