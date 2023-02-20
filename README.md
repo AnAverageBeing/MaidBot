@@ -1,4 +1,4 @@
-<h1>🌸 MaidBOT</h1>
+<h1>🏵️ MaidBOT</h1>
 <p>MaidBOT is a personal Discord bot project written in Java using the JDA library. It provides various commands that can be useful for managing your Discord server.</p>
 
 <h2>🤖 Commands</h2>
