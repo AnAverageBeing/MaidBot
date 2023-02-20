@@ -1,65 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #005eff;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #005eff;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    li code {
-      background-color: #ddd;
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
-      margin-right: 1rem;
-    }
-    ol {
-      margin-left: 2rem;
-    }
-    img {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    }
-    a {
-      color: #005eff;
-    }
-  </style>
   <body>
     <div align="center">
       <img src="https://iili.io/HGcjFi7.jpg" alt="MaidBOT Logo" width="200px">
     </div>
     <h1 align="center">MaidBOT</h1>
-    <p align="center"> MaidBOT is a personal Discord bot project written in Java using the JDA library. It provides various commands that can be useful for managing your Discord server. </p>
+    <p align="center"><b> MaidBOT is a personal Discord bot project written in Java using the JDA library. Its a fun discord bot.</b></p>
     <h2>🤖 Commands</h2>
     <ul>
       <li> 🟢 <code>.ping</code> - Returns the latency of the bot. </li>
