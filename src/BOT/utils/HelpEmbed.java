@@ -14,7 +14,7 @@ public class HelpEmbed {
     static {
         EmbedBuilder embedBuilder = new EmbedBuilder()
                 .setColor(new Color(32, 247, 93))
-                .setFooter("Made with ❤️ by CatOnDrugs#1521")
+                .setFooter("Made with ❤️ by FatLinuxUser#5841")
                 .setTitle("**HELP**");
         for (ICommand c : CommandManager.getCommands()) {
             embedBuilder.addField(Maid.prefix + c.getName(),
