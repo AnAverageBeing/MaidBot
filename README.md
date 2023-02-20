@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://iili.io/HGcjFi7.jpg" alt="MaidBOT Logo">
+  <img src="https://iili.io/HGcjFi7.jpg" width="200" height="200" alt="MaidBOT logo">
 </p>
 
 <h1 align="center">MaidBOT</h1>
