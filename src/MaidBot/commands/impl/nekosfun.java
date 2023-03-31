@@ -8,7 +8,14 @@ import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class nekosfun implements ICommand {
+
+    private static final int TAG_LIMIT = 10;
 
     @Override
     public String getName() {
@@ -17,15 +24,17 @@ public class nekosfun implements ICommand {
 
     @Override
     public String getDescription() {
-        return "sends random anime image or gifs for a given tag";
+        return "Sends random anime image or gifs for a given tag";
     }
 
     @Override
     public String getHelp() {
-        return "Usage: `" + Maid.Prefix + "nekosfun {tag}`" +
-                "\n\n**Tags:**\n\n" +
-                "NSFW TAGS: ```4k,blowjob,boobs,cum,feet,hentai,spank,gasm,lesbian,lewd,pussy```" + "\n" +
-                "SFW TAGS: ```kiss,lick,hug,baka,poke,cry,smug,slap,tickle,pat,laugh,feed,cuddle,wallpapers```";
+        List<String> nsfwTags = NekosFun.getNsfwTags();
+        List<String> sfwTags = NekosFun.getSfwTags();
+
+        return String.format("Usage: `%snekosfun {tag(s)}`\n\n**Tags:**\n\n" +
+                "NSFW TAGS: `%s`\nSFW TAGS: `%s`",
+                Maid.Prefix, String.join(",", nsfwTags), String.join(",", sfwTags));
     }
 
     @Override
@@ -34,29 +43,39 @@ public class nekosfun implements ICommand {
     }
 
     @Override
-    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild)
-            throws Exception {
+    public void onCommand(String command, String[] args, Message message, User sender, TextChannel channel, Guild guild) {
         if (!message.isFromGuild()) {
             return;
         }
-        if (args.length < 1) {
+
+        if (args.length == 0) {
             message.getChannel().sendMessage(getHelp()).queue();
+            return;
         }
-        if (NekosFun.isValidTag(args[0].toLowerCase())) {
-            if (NekosFun.isTagNSFW(args[0].toLowerCase())) {
-                if (!channel.isNSFW()) {
-                    message.reply("Please use a NSFW channel for this tag!").queue();
-                } else {
-                    channel.sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
-                    channel.sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
-                }
+
+        List<String> tags = Arrays.stream(args)
+                .limit(TAG_LIMIT)
+                .map(String::toLowerCase)
+                .filter(NekosFun::isValidTag)
+                .collect(Collectors.toList());
+
+        if (tags.isEmpty()) {
+            channel.sendMessage("Invalid tag. Use `" + Maid.Prefix + "help nekosfun` to see valid tags.").queue();
+            return;
+        }
+
+        for (String tag : tags) {
+            if (NekosFun.isTagNSFW(tag) && !channel.isNSFW()) {
+                channel.sendMessage("Please use a NSFW channel for the NSFW tag '" + tag + "'!").queue();
             } else {
-                channel.sendMessage(NekosFun.getImageURL(args[0].toLowerCase())).queue();
-                channel.sendMessage("ENJOY  **(=^ ◡ ^=)**").queue();
+                try {
+                    channel.sendMessage(NekosFun.getImageURL(tag)).queue();
+                } catch (IOException e) {
+                    channel.sendMessage("```\n"+e.getMessage()+"\n```").queue();
+                }
             }
-        } else {
-            channel.sendMessage("Invalid token type .help rstuff to see valid tags").queue();
         }
+        channel.sendMessage("Enjoy! (=^ ◡ ^=)").queue();
     }
 
 }
