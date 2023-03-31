@@ -1,5 +1,5 @@
 # Set the base image to temurin (JDK 17)
-FROM adoptium/temurin:17-jdk AS builder
+FROM eclipse-temurin:17 AS builder
 
 # Create the /app directory
 RUN mkdir /app
