@@ -1,5 +1,5 @@
 # Bot token
-token: your-bot-token-goes-here
+token: token-goes-here
 
 # Command prefix
 prefix: m!
