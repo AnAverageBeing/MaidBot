@@ -3,7 +3,7 @@ FROM eclipse-temurin:17 AS builder
 
 # Create the /app directory
 RUN mkdir /app
-
+z
 # Set the working directory to /app
 WORKDIR /app
 

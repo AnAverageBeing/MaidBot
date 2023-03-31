@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import MaidBot.Maid;
 import net.dv8tion.jda.api.OnlineStatus;
 
 public class ConfigManager {
@@ -42,8 +43,8 @@ public class ConfigManager {
             Objects.requireNonNull(prefix, "Prefix cannot be null or empty");
 
             configData = new ConfigData(token, prefix, onlineStatus);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Maid.Logger.error("ERROR WHILE READING CONFIGE FILE:", e);
             System.exit(1);
         }
     }
