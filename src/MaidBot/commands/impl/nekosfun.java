@@ -69,7 +69,7 @@ public class nekosfun implements ICommand {
                 channel.sendMessage("Please use a NSFW channel for the NSFW tag '" + tag + "'!").queue();
             } else {
                 try {
-                    channel.sendMessage(NekosFun.getImageURL(tag)).queue();
+                    channel.sendMessage("**"+tag + "**: " +NekosFun.getImageURL(tag)).queue();
                 } catch (IOException e) {
                     channel.sendMessage("```\n"+e.getMessage()+"\n```").queue();
                 }
