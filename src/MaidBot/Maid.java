@@ -18,7 +18,6 @@ public class Maid {
         ConfigData data = ConfigManager.getConfigData();
         Prefix = data.getPrefix();
         System.out.println("MADE BY: FatLinuxUser#5841");
-        System.out.println("Trying to start using token: "+ data.getToken());
         JDABuilder builder = JDABuilder.createDefault(data.getToken());
         builder.setMemberCachePolicy(MemberCachePolicy.ALL);
         builder.enableIntents(GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS));
