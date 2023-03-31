@@ -9,6 +9,7 @@ WORKDIR /app
 
 # Copy the MaidBot.jar file to the container
 COPY MaidBot.jar .
+COPY config.txt .
 
 # Set the environment variable to enable GC optimization flags
 ENV JAVA_TOOL_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:+TieredCompilation"
