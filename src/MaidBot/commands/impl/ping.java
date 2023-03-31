@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
 import java.time.temporal.ChronoUnit;
 
+import MaidBot.Maid;
 import MaidBot.commands.ICommand;
 
 public class ping implements ICommand {
@@ -20,7 +21,7 @@ public class ping implements ICommand {
 
     @Override
     public String getHelp() {
-        return "use this command to check BOT's latency.";
+        return "Usage: `" + Maid.Prefix + "ping`";
     }
 
     public boolean isAdminCommand() {
@@ -32,7 +33,16 @@ public class ping implements ICommand {
             throws Exception {
         Message message1 = channel.sendMessage("Pinging...").complete();
         long ping = message.getTimeCreated().until(message1.getTimeCreated(), ChronoUnit.MILLIS);
-        message1.editMessage("> **Ping:** **`" + ping + "`** **ms**").queue();
-    }
-
+    
+        String emoji;
+        if (ping <= 50) {
+            emoji = "\uD83D\uDFE2"; // green square
+        } else if (ping <= 100) {
+            emoji = "\uD83D\uDFE1"; // yellow square
+        } else {
+            emoji = "\uD83D\uDD34"; // red square
+        }
+    
+        message1.editMessage(emoji + " **Ping:** **`" + ping + "`** **ms**").queue();
+    }    
 }

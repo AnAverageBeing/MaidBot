@@ -1,0 +1,29 @@
+------ Fri Mar 31 08:23:44 PM IST 2023 ------
+MADE BY: FatLinuxUser#5841
+Trying to start using token: OTg0MTMzOTQ4Mjk4OTExNzc1.GdHPkc.r9oOQKu6qqNgiCvt8bEeNIytxdyUHGhI2UKYA4
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/logging/log4j/spi/AbstractLoggerAdapter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:37)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at net.dv8tion.jda.internal.utils.JDALogger.<clinit>(JDALogger.java:49)
+	at net.dv8tion.jda.internal.utils.IOUtil.<clinit>(IOUtil.java:40)
+	at net.dv8tion.jda.api.JDABuilder.build(JDABuilder.java:1762)
+	at MaidBot.Maid.main(Maid.java:26)
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.spi.AbstractLoggerAdapter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 16 more
+------ Fri Mar 31 08:24:08 PM IST 2023 ------
+MADE BY: FatLinuxUser#5841
+Trying to start using token: OTg0MTMzOTQ4Mjk4OTExNzc1.GdHPkc.r9oOQKu6qqNgiCvt8bEeNIytxdyUHGhI2UKYA4
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.

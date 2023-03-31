@@ -13,6 +13,7 @@ import MaidBot.commands.impl.help;
 import MaidBot.commands.impl.nekosfun;
 import MaidBot.commands.impl.ping;
 import MaidBot.commands.impl.prefix;
+import MaidBot.commands.impl.stop;
 
 public class CommandManager {
     private final static HashSet<ICommand> commands = new HashSet<>();
@@ -23,9 +24,10 @@ public class CommandManager {
 
     private void registerCommands() {
         commands.add(new help());
-        commands.add(new prefix());
-        commands.add(new ping());
         commands.add(new nekosfun());
+        commands.add(new ping());
+        commands.add(new prefix());
+        commands.add(new stop());
     }
 
     public static ICommand[] getCommands() {
