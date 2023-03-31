@@ -34,7 +34,7 @@ public class ConfigManager {
                     .map(line -> line.split(":", 2))
                     .collect(Collectors.toMap(arr -> arr[0].trim(), arr -> arr[1].trim()));
 
-            String token = configMap.get(TOKEN_KEY) == "token-goes-here" ? System.getenv("TOKEN") : configMap.get(TOKEN_KEY);
+            String token = configMap.get(TOKEN_KEY).equalsIgnoreCase("token-goes-here") ? System.getenv("TOKEN") : configMap.get(TOKEN_KEY);
             String prefix = configMap.get(PREFIX_KEY);
             String onlineStatus = configMap.getOrDefault(ONLINE_STATUS_KEY, ONLINE_STATUS_DEFAULT);
 

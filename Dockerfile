@@ -7,7 +7,7 @@ RUN mkdir /app
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the MaidBot.jar file to the container
+# Copy the MaidBot.jar  and config,txt to the container
 COPY MaidBot.jar .
 COPY config.txt .
 
