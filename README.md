@@ -5,7 +5,7 @@
       <img src="https://iili.io/HGcjFi7.jpg" alt="MaidBOT Logo" width="200px">
     </div>
     <h1 align="center">MaidBOT</h1>
-    <p align="center"><b> MaidBOT is a personal Discord bot project written in Java using the JDA library.<br> Its a fun discord bot.</b></p>
+    <p align="center"><b> MaidBOT my personal Discord Bot written in Java using the JDA library.<br> Its a fun bot.</b></p>
     <h2>🤖 Commands</h2>
     <ul>
       <li><code>help</code> - Provides information about the available commands. </li>
