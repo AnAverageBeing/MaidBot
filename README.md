@@ -15,10 +15,8 @@
     </ul>
     <h2>🛠️ How to Use</h2>
     <ol>
-      <li>Create a directory to hold bot files. </li>
-      <li>Create a file named <code>token.txt</code> and put your bot token into it. </li>
-      <li>Copy the <code>run.sh</code> script into the directory. </li>
-      <li>Copy <code>MaidBot.jar</code> into the directory. </li>
+      <li>Clone this repo. </li>
+      <li>Edit config.txt </li>
       <li>Run the <code>run.sh</code> script. </li>
     </ol>
     <h2>💻 Improving MaidBOT</h2>
