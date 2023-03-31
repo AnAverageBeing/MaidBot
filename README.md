@@ -8,11 +8,10 @@
     <p align="center"><b> MaidBOT is a personal Discord bot project written in Java using the JDA library.<br> Its a fun discord bot.</b></p>
     <h2>🤖 Commands</h2>
     <ul>
-      <li> 🟢 <code>.ping</code> - Returns the latency of the bot. </li>
-      <li> ❓ <code>.help</code> - Provides information about the available commands. </li>
-      <li> 🌐 <code>.rstuff</code> - Retrieves random anime images based on specified tags. </li>
-      <li> 🔄 <code>.update</code> - Updates and re-runs the bot by downloading the latest version from this GitHub repository. </li>
-      <li> ⏹️ <code>.stop</code> - Stops the bot. </li>
+      <li><code>help</code> - Provides information about the available commands. </li>
+      <li><code>ping</code> - Returns the latency of the bot. </li>
+      <li><code>prefix</code> - Changes the bot prefix. </li>
+      <li><code>neokosfun</code> - Retrieves random anime images based on specified tags from http://api.nekos.fun:8080/api/. </li>
     </ul>
     <h2>🛠️ How to Use</h2>
     <ol>
