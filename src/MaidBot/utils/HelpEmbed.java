@@ -18,7 +18,7 @@ public class HelpEmbed {
                 .setTitle("**HELP**");
         for (ICommand c : CommandManager.getCommands()) {
             embedBuilder.addField(Maid.Prefix + c.getName(),
-                    c.getDescription() + "\nis Admin Command: `" + c.isAdminCommand() + "`", false);
+                    c.getDescription() + "\nis Admin Command: **`" + c.isAdminCommand() + "`**", false);
         }
         embedBuilder.addField("Need More Help?", "use help command followed by a command to get its full detail",
                 false);

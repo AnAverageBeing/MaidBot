@@ -44,7 +44,7 @@ public class ConfigManager {
 
             configData = new ConfigData(token, prefix, onlineStatus);
         } catch (Exception e) {
-            Maid.Logger.error("ERROR WHILE READING CONFIGE FILE:", e);
+            e.printStackTrace();
             System.exit(1);
         }
     }
