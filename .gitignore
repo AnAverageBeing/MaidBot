@@ -28,5 +28,5 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-### TOKEN FILE ###
-token.txt
+### LOG FILE ###
+logs.txt

@@ -11,7 +11,7 @@ import MaidBot.utils.ConfigManager.ConfigData;
 
 public class Maid {
 
-    public static String Prefix;
+    public volatile static String Prefix = ";";
     public static JDA Bot;
 
     public static void main(String[] args) throws Exception {

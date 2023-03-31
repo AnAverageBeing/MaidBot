@@ -35,9 +35,9 @@ public class ping implements ICommand {
         long ping = message.getTimeCreated().until(message1.getTimeCreated(), ChronoUnit.MILLIS);
     
         String emoji;
-        if (ping <= 50) {
+        if (ping <= 200) {
             emoji = "\uD83D\uDFE2"; // green square
-        } else if (ping <= 100) {
+        } else if (ping <= 600) {
             emoji = "\uD83D\uDFE1"; // yellow square
         } else {
             emoji = "\uD83D\uDD34"; // red square
