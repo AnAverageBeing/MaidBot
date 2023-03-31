@@ -2,7 +2,7 @@
 token: token-goes-here
 
 # Command prefix
-prefix: m!
+prefix: ;
 
 # Bot initial online status (optional)
 status: online

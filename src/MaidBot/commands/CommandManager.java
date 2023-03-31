@@ -33,7 +33,7 @@ public class CommandManager {
     }
 
     public void executeCommand(String input, Message message, User sender, TextChannel channel, Guild guild) {
-        var parts = input.replace(Maid.Prefix, "").trim().split("\\s+", 2);
+        var parts = input.replaceFirst(Maid.Prefix, "").trim().split("\\s+", 2);
         var command = parts[0];
         var args = parts.length > 1 ? parts[1].split("\\s+") : new String[0];
 

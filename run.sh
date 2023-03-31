@@ -14,4 +14,4 @@ fi
 docker build -t my-discord-bot .
 
 # Run the Docker container from the built image, mapping the container's port 80 to the host's port 8080
-docker run -p 8080:80 my-discord-bot
+docker run my-discord-bot

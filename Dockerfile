@@ -14,8 +14,6 @@ COPY config.txt .
 # Set the environment variable to enable GC optimization flags
 ENV JAVA_TOOL_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:+TieredCompilation"
 
-# Expose the default port used by your Discord bot
-EXPOSE 80
 
 # Start the bot with the command: java -jar MaidBot.jar
 CMD ["java", "-jar", "MaidBot.jar"]
