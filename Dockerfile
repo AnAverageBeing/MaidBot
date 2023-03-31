@@ -11,7 +11,7 @@ WORKDIR /app
 COPY MaidBot.jar .
 
 # Set the environment variable to enable GC optimization flags
-ENV JAVA_TOOL_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -XX:ParallelGCThreads=2 -XX:+TieredCompilation"
+ENV JAVA_TOOL_OPTIONS="-XX:+UseG1GC -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -XX:+TieredCompilation"
 
 # Expose the default port used by your Discord bot
 EXPOSE 80
