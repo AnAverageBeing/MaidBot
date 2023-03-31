@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import MaidBot.commands.CommandManager;
+import MaidBot.listners.MaidListener;
 import MaidBot.utils.ConfigManager;
 import MaidBot.utils.ConfigManager.ConfigData;
 
