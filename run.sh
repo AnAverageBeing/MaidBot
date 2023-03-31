@@ -1,18 +1,17 @@
 #!/bin/sh
 
-java \
-    -XX:+UseG1GC \
-    -XX:+UseStringDeduplication \
-    -XX:+UnlockExperimentalVMOptions \
-    -XX:+UseZGC \
-    -XX:ParallelGCThreads=2 \
-    -XX:+TieredCompilation \
-    -jar MaidBot.jar >> logs.txt 2>&1 &
+# Check if Docker is installed
+if ! command -v docker &> /dev/null
+then
+    echo "Docker not found, installing..."
+    # Install Docker
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    rm get-docker.sh
+fi
 
+# Build the Docker image with a tag
+docker build -t my-discord-bot .
 
-screen -S maidbot -d -m sh -c 'sleep 5 && screen -r maidbot'
-screen -S maidbot -X stuff $'\030'
-screen -S maidbot -X stuff "trap '' INT\n"
-screen -S maidbot -X screen -t shell sh -c 'while true; do clear; echo "Bot Running..."; sleep 1; done'
-
-screen -S maidbot -X screen -t watch sh -c 'while true; do if ! pgrep -x java > /dev/null; then sleep 1 && screen -X quit; fi; done'
+# Run the Docker container from the built image, mapping the container's port 80 to the host's port 8080
+docker run -p 8080:80 my-discord-bot
