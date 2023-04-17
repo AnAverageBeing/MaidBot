@@ -17,7 +17,7 @@
     <ol>
       <li>Clone this repo. </li>
       <li>Edit config.txt </li>
-      <li>Run the <code>run.sh</code> script. </li>
+      <li>Run <code>bash scripts/run.sh</code> script. </li>
     </ol>
     <h2>💻 Improving MaidBOT</h2>
     <p> Feel free to contribute to MaidBOT by submitting pull requests or opening issues on this GitHub repository. Your feedback is greatly appreciated. </p>
